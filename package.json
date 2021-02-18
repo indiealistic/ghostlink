@@ -1,0 +1,45 @@
+{
+  "name": "ghostlink",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "serve": "webpack-dev-server",
+    "start": "yarn serve"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "babel-eslint": "^10.0.3",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.1",
+    "eslint": "^6.7.2",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.19.1",
+    "pug": "^2.0.4",
+    "pug-html-loader": "^1.1.5",
+    "sass": "^1.23.7",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.1",
+    "stylelint": "^12.0.0",
+    "stylelint-order": "^3.1.1",
+    "ts-loader": "^6.2.1",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.3",
+    "typescript-tslint-plugin": "^0.5.5",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "animejs": "^3.1.0",
+    "gsap": "^3.0.2",
+    "@barba/core": "latest"
+  }
+}
