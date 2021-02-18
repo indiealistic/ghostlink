@@ -1,45 +1,57 @@
 {
-  "name": "ghostlink",
+  "name": "@indiealistic/ghostlink",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "description": "A new link web concept for user experience",
+  "source": "src/ghostlink.js",
+  "main": "dist/ghostlink.umd.js",
+  "browser": "dist/ghostlink.umd.js",
+  "unpkg": "dist/ghostlink.umd.js",
+  "module": "dist/ghostlink.mjs",
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "serve": "webpack-dev-server",
-    "start": "yarn serve"
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "docs": "webpack --config webpack.docs.js",
+    "build": "microbundle --no-sourcemap",
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indiealistic/ghostlink.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "web",
+    "concept",
+    "experiment",
+    "user",
+    "experience",
+    "ghostlink"
+  ],
+  "author": {
+    "name": "Indiealistic",
+    "email": "hey@indiealistic.studio",
+    "url": "https://indiealistic.studio",
+    "github": "@indiealistic"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indiealistic/ghostlink/issues"
+  },
+  "homepage": "https://github.com/indiealistic/ghostlink#readme",
   "devDependencies": {
-    "autoprefixer": "^9.7.3",
-    "babel-eslint": "^10.0.3",
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^3.2.1",
-    "eslint": "^6.7.2",
-    "file-loader": "^5.0.2",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^0.8.0",
-    "postcss-loader": "^3.0.0",
-    "prettier": "^1.19.1",
-    "pug": "^2.0.4",
-    "pug-html-loader": "^1.1.5",
-    "sass": "^1.23.7",
-    "sass-loader": "^8.0.0",
-    "style-loader": "^1.0.1",
-    "stylelint": "^12.0.0",
-    "stylelint-order": "^3.1.1",
-    "ts-loader": "^6.2.1",
-    "tslint": "^5.20.1",
-    "typescript": "^3.7.3",
-    "typescript-tslint-plugin": "^0.5.5",
-    "url-loader": "^3.0.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
-  },
-  "dependencies": {
-    "animejs": "^3.1.0",
-    "gsap": "^3.0.2",
-    "@barba/core": "latest"
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@barba/core": "^2.9.7",
+    "@barba/css": "^2.1.15",
+    "babel-jest": "^26.1.0",
+    "babel-loader": "^8.1.0",
+    "jest": "^26.1.0",
+    "microbundle": "^0.12.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^5.0.9"
   }
 }
