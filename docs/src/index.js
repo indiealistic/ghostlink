@@ -1,12 +1,10 @@
-'use strict';
-
 import ghostlink from 'source/ghostlink.js';
 import barba from '@barba/core';
 import barbaCss from '@barba/css';
 
 barba.hooks.once(() => {
   ghostlink.init({
-    on: 'a:not(.github-button)'
+    on: 'a:not(.github-button)',
   });
 });
 
@@ -17,5 +15,5 @@ barba.hooks.enter(() => {
 barba.use(barbaCss);
 
 barba.init({
-  preventRunning: true
+  preventRunning: true,
 });

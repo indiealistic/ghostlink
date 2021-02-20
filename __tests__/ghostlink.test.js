@@ -38,7 +38,7 @@ it('should have nodelist properly populated', () => {
 describe('handle properties', () => {
   it('could have custom props that override defaults', () => {
     ghostlink.init({
-      timeout: 700
+      timeout: 700,
     });
 
     expect(ghostlink.props.timeout).toBe(700);
@@ -46,7 +46,7 @@ describe('handle properties', () => {
 
   it('could have props.on set with a custom query selector', () => {
     ghostlink.init({
-      on: document.querySelectorAll('a')
+      on: document.querySelectorAll('a'),
     });
 
     expect(ghostlink._nodelist.length).toBe(1);
@@ -54,7 +54,7 @@ describe('handle properties', () => {
 
   it('should use previous props on refresh', () => {
     ghostlink.init({
-      timeout: 700
+      timeout: 700,
     });
 
     ghostlink.refresh();
@@ -90,7 +90,7 @@ describe('handle event listeners', () => {
 
   it('should listen to click', () => {
     ghostlink.init({
-      preventClick: false
+      preventClick: false,
     });
 
     spy = jest.spyOn(ghostlink, '_click');
@@ -102,7 +102,7 @@ describe('handle event listeners', () => {
     spy.mockRestore();
   });
 
-  it ('should listen to `Enter` key', () => {
+  it('should listen to `Enter` key', () => {
     ghostlink.init();
 
     spy = jest.spyOn(ghostlink, '_keydown');
@@ -127,7 +127,7 @@ describe('handle event listeners', () => {
 
   it('should do nothing on click when preventClick is enable', () => {
     ghostlink.init({
-      preventClick: true
+      preventClick: true,
     });
 
     spy = jest.spyOn(ghostlink, '_click');
@@ -139,7 +139,7 @@ describe('handle event listeners', () => {
 
   it('should return on engage when navigating', () => {
     ghostlink.init({
-      preventClick: false
+      preventClick: false,
     });
 
     html.link.dispatchEvent(html.event.mouse.click);
@@ -152,7 +152,7 @@ describe('handle event listeners', () => {
 
   it('should return on cancel when navigating', () => {
     ghostlink.init({
-      preventClick: false
+      preventClick: false,
     });
 
     spy = jest.spyOn(ghostlink, '_cancel');
@@ -164,7 +164,7 @@ describe('handle event listeners', () => {
 
   it('should return when worker is undefined', () => {
     ghostlink.init({
-      preventClick: false
+      preventClick: false,
     });
 
     ghostlink._worker = undefined;
@@ -196,7 +196,7 @@ describe('handle promises', () => {
     ghostlink.init({
       await(resolve) {
         resolve();
-      }
+      },
     });
 
     spy = jest.spyOn(ghostlink, '_dispatch');
@@ -214,7 +214,7 @@ describe('handle promises', () => {
     ghostlink.init({
       await() {
         throw new Error('exception');
-      }
+      },
     });
 
     spy = jest.spyOn(ghostlink, '_reset');
@@ -230,7 +230,7 @@ describe('handle promises', () => {
     ghostlink.init({
       await(resolve, reject) {
         reject();
-      }
+      },
     });
 
     html.link.dispatchEvent(html.event.mouse.enter);
