@@ -1,6 +1,6 @@
-# Github workflow to publish the documentation to Github Pages
+# Github workflow to deploy the documentation to Github Pages
 
-name: Publish docs
+name: Deploy docs
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
         run: npm run docs
 
       - name: Commit changes
-        uses: EndBug/add-and-commit@v4
+        uses: EndBug/add-and-commit@master
         with:
           add: "docs/assets"
           message: "Deploy docs"
