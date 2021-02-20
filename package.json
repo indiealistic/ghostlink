@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "A new link web concept for user experience",
   "source": "src/ghostlink.js",
-  "main": "dist/ghostlink.umd.js",
+  "main": "dist/ghostlink.js",
   "browser": "dist/ghostlink.umd.js",
   "unpkg": "dist/ghostlink.umd.js",
   "module": "dist/ghostlink.mjs",
