@@ -1,6 +1,6 @@
 {
   "name": "@indiealistic/ghostlink",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A new link web concept for user experience",
   "source": "src/ghostlink.js",
   "main": "dist/ghostlink.js",
