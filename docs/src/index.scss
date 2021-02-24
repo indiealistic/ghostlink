@@ -56,11 +56,6 @@ h1 {
   margin: 20px 0;
 }
 
-[data-ghostlink='dispatch'] {
-  color: $base-color;
-  cursor: progress;
-}
-
 .link {
   position: relative;
   color: $vibrant-color;
@@ -85,15 +80,20 @@ h1 {
   }
 }
 
-.title {
-  height: 100px;
+.note {
+  position: relative;
+  padding-left: 20px;
+  color: lighten($base-color, 55%);
+  font-size: 0.63em;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    content: '*';
+  }
 }
 
 .github {
-  &-star {
-    height: 30px;
-  }
-
   &-button {
     display: inline-flex;
     margin-left: 20px;
@@ -123,6 +123,11 @@ h1 {
     cx: 50%;
     cy: 50%;
   }
+}
+
+[data-ghostlink='dispatch'] {
+  color: $base-color;
+  cursor: progress;
 }
 
 @media (max-width: 640px) {
